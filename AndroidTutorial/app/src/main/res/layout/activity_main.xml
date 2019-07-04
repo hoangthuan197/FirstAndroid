@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:text="Đăng Nhập"
             android:textColor="#000"
-            android:textSize="17sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <View
@@ -57,13 +57,35 @@
         android:paddingHorizontal="10dp"
         android:paddingVertical="5dp" />
 
-    <Button
-        android:background="@drawable/login_btn_bg"
-        android:textColor="#fff"
+    <RelativeLayout
+        android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:text="Đăng Nhập" />
+        android:background="@drawable/login_btn_selectable_bg"
+        >
+
+        <TextView
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="Đăng Nhập" />
+
+        <ImageView
+            android:id="@+id/img_arrow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            />
+
+    </RelativeLayout>
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,7 +103,7 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_fb"/>
+            android:src="@drawable/ic_fb" />
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
