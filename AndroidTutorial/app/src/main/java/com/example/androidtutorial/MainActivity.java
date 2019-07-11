@@ -75,8 +75,12 @@ public class MainActivity extends AppCompatActivity {
 
                     Intent intent;
                     intent = new Intent(MainActivity.this, UpdateUserInfoActivity.class);
-                    startActivity(intent);
+                    //thêm dữ liệu vào intent(nhét phoneNumber vào intent)
+                    intent.putExtra("phoneNumberPassWord", phoneNumber);
+                    intent.putExtra("name", "ThuanHV");
 
+
+                    startActivity(intent);
 
                 } else {
                     Toast.makeText(MainActivity.this, "Your phone number is too short", Toast.LENGTH_SHORT).show();
