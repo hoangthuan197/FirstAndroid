@@ -1,7 +1,6 @@
 package com.example.androidtutorial;
 
 import android.content.Intent;
-import android.os.DeadObjectException;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -64,7 +63,7 @@ public class UpdateUserInfoActivity extends AppCompatActivity {
         //nem vao intent
 
         Intent intent;
-        intent = new Intent(UpdateUserInfoActivity.this, HomeScreenActivity.class);
+        intent = new Intent(UpdateUserInfoActivity.this, AccountScreenActivity.class);
         intent.putExtra("user", user);
         startActivity(intent);
 
