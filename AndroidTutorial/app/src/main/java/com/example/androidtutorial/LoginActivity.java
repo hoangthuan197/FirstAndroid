@@ -1,6 +1,7 @@
 package com.example.androidtutorial;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,12 +10,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         init();
 
 //        TẠO ĐỐI TƯỢNG TỪ KHUÔN Student
@@ -71,21 +72,32 @@ public class MainActivity extends AppCompatActivity {
                 String phoneNumber = edtPhoneNumber.getText().toString();
                 int phoneNumberChecker = phoneNumber.length();
                 if (phoneNumberChecker > 9) {
-                    Toast.makeText(MainActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
 
                     Intent intent;
-                    intent = new Intent(MainActivity.this, UpdateUserInfoActivity.class);
+                    intent = new Intent(LoginActivity.this, UpdateUserInfoActivity.class);
                     //thêm dữ liệu vào intent(nhét phoneNumber vào intent)
                     intent.putExtra("phoneNumberPassWord", phoneNumber);
                     intent.putExtra("name", "ThuanHV");
 
+                    //Luu trang thai dang nhap
+                    setLogin();
+
 
                     startActivity(intent);
+                    finish();
 
                 } else {
-                    Toast.makeText(MainActivity.this, "Your phone number is too short", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Your phone number is too short", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+    }
+
+    void setLogin() {
+        SharedPreferences sharedPreferences = getSharedPreferences("dekko", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("isLogin", true);
+        editor.apply();
     }
 }
