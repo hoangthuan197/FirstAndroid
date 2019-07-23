@@ -6,6 +6,8 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.androidtutorial.recyclerView.HistoryActivity;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -21,17 +23,17 @@ public class SplashActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                SharedPreferences sharedPreferences = getSharedPreferences("dekko", MODE_PRIVATE);
-                boolean isLogin = sharedPreferences.getBoolean("isLogin", false);
-                if (isLogin){
-                    Intent intent = new Intent(SplashActivity.this,AccountScreenActivity.class );
+//                SharedPreferences sharedPreferences = getSharedPreferences("dekko", MODE_PRIVATE);
+//                boolean isLogin = sharedPreferences.getBoolean("isLogin", false);
+//                if (isLogin){
+                    Intent intent = new Intent(SplashActivity.this, HistoryActivity.class );
                     startActivity(intent);
                     finish();
-                }else {
-                    Intent intent = new Intent(SplashActivity.this, LoginActivity.class );
-                    startActivity(intent);
-                    finish();
-                }
+//                }else {
+//                    Intent intent = new Intent(SplashActivity.this, LoginActivity.class );
+//                    startActivity(intent);
+//                    finish();
+//                }
 
 
 //                Intent intent = new Intent(SplashActivity.this,LoginActivity.class );
