@@ -6,11 +6,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidtutorial.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder> {
 
@@ -32,6 +36,14 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
         History history = data.get(i);
         historyViewHolder.tvTitle.setText(history.getTitle());
         historyViewHolder.tvPoint.setText(history.getPoint()+"");
+        if (history.point == 10){
+            historyViewHolder.tvPoint.setVisibility(View.INVISIBLE);
+        }else {
+            historyViewHolder.tvPoint.setVisibility(View.VISIBLE);
+        }
+
+        Picasso.get().load(history.getIcon()).into(historyViewHolder.imgIcon);
+
     }
 
     @Override
@@ -41,11 +53,13 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
 
     class HistoryViewHolder extends RecyclerView.ViewHolder {
         TextView tvTitle, tvPoint;
+        CircleImageView imgIcon;
 
         public HistoryViewHolder(@NonNull View itemView) {
             super(itemView);
             tvPoint = itemView.findViewById(R.id.tv_point);
             tvTitle = itemView.findViewById(R.id.tv_title);
+            imgIcon = itemView.findViewById(R.id.img_icon);
         }
     }
 

@@ -1,14 +1,23 @@
 package com.example.androidtutorial.recyclerView;
 
 public class History {
-    String title;
+    String title, icon;
     int point;
 
-
-    public History(String title, int point) {
+    public History(String icon, String title, int point) {
         this.title = title;
         this.point = point;
+        this.icon = icon;
     }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
 
     public String getTitle() {
         return title;
@@ -25,4 +34,6 @@ public class History {
     public void setPoint(int point) {
         this.point = point;
     }
+
+
 }
