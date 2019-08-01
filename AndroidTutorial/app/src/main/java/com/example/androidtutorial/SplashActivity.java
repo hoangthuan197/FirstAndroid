@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.androidtutorial.placeRecyclerView.PlacesActivity;
 import com.example.androidtutorial.recyclerView.HistoryActivity;
 
 public class SplashActivity extends AppCompatActivity {
@@ -26,7 +27,7 @@ public class SplashActivity extends AppCompatActivity {
 //                SharedPreferences sharedPreferences = getSharedPreferences("dekko", MODE_PRIVATE);
 //                boolean isLogin = sharedPreferences.getBoolean("isLogin", false);
 //                if (isLogin){
-                    Intent intent = new Intent(SplashActivity.this, HistoryActivity.class );
+                    Intent intent = new Intent(SplashActivity.this, PlacesActivity.class );
                     startActivity(intent);
                     finish();
 //                }else {

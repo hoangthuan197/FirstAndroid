@@ -4,7 +4,7 @@ public class History {
     String title, icon;
     int point;
 
-    public History(String icon, String title, int point) {
+    public History(String z, String title, int point) {
         this.title = title;
         this.point = point;
         this.icon = icon;
