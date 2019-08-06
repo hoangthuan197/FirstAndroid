@@ -36,18 +36,18 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesView
     public void onBindViewHolder(@NonNull PlacesViewHolder placesViewHolder, int i) {
         Places places = data.get(i);
         placesViewHolder.tvPlaceName.setText(places.getPlaceName());
-        if (places.isPromotion ==1){
-            placesViewHolder.tvIsPromotion.setText("프로모션");
+        placesViewHolder.tvIsPromotion.setText("프로모션");
+        placesViewHolder.tvIsMoreDetail.setText("상세보기");
+        if (places.isPromotion == 1) {
+            placesViewHolder.tvIsPromotion.setVisibility(View.VISIBLE);
+        } else {
+            placesViewHolder.tvIsPromotion.setVisibility(View.INVISIBLE);
         }
-        else{
-            placesViewHolder.tvIsPromotion.setText("");
+        if (places.isMoreDetail == 1) {
+            placesViewHolder.tvIsMoreDetail.setVisibility(View.VISIBLE);
+        } else {
+            placesViewHolder.tvIsMoreDetail.setVisibility(View.INVISIBLE);
         }
-        if (places.isMoreDetail==1){
-            placesViewHolder.tvIsMoreDetail.setText("상세보기");
-        }else {
-            placesViewHolder.tvIsMoreDetail.setText("");
-        }
-
 
 
     }
