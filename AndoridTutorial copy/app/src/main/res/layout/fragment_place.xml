@@ -1,12 +1,13 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:minWidth="500dp"
     android:layout_height="match_parent">
 
     <android.support.v7.widget.RecyclerView
-        android:paddingHorizontal="5dp"
-        android:id="@+id/rv_category"
+        android:id="@+id/rv_place"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
     </android.support.v7.widget.RecyclerView>
 
-</RelativeLayout>
+</LinearLayout>

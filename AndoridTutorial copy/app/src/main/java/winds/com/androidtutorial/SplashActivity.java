@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import winds.com.androidtutorial.fragment.MainActivity;
 import winds.com.androidtutorial.recyclerview.CategoryActivity;
 import winds.com.androidtutorial.recyclerview.UsefulPhoneActivity;
 
@@ -26,7 +27,7 @@ public class SplashActivity extends AppCompatActivity {
 //                SharedPreferences sharedPreferences = getSharedPreferences("dekko", MODE_PRIVATE);
 //                boolean isLogin = sharedPreferences.getBoolean("isLogin", false);
 //                if (isLogin) {
-                    Intent intent = new Intent(SplashActivity.this, CategoryActivity.class);
+                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
 //                } else {
@@ -37,6 +38,6 @@ public class SplashActivity extends AppCompatActivity {
 
 
             }
-        }, 500);
+        }, 100);
     }
 }

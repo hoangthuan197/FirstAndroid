@@ -19,8 +19,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesViewHolder> {
 
-    Context context;
-    ArrayList<Places> data;
+    public Context context;
+    public ArrayList<Places> data;
 
     @NonNull
     @Override

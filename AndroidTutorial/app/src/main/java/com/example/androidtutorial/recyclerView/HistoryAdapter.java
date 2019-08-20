@@ -18,8 +18,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder> {
 
-    Context context;
-    ArrayList<History> data;
+    public Context context;
+    public ArrayList<History> data;
 
     @NonNull
     @Override

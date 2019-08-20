@@ -15,8 +15,8 @@ import winds.com.androidtutorial.recyclerview.model.Place;
 
 public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceViewHolder> {
 
-    ArrayList<Place> data = new ArrayList<>();
-    Context context;
+    private ArrayList<Place> data = new ArrayList<>();
+    private Context context;
 
     public PlaceAdapter(ArrayList<Place> data, Context context) {
         this.data = data;

@@ -31,6 +31,17 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder categoryViewHolder, int i) {
+        Category category = data.get(i);
+        if(category.getCategoryID() < 0 ){
+            vBg.setBackground(context.getDrawable(R.drawable.gradient_pink_bg));
+        }else if(category.type == 2){
+            vBg.setBackground(context.getDrawable(R.drawable.gradient_yellow_dark_bg));
+        }else if (i == 0){
+            vBg.setBackground(context.getDrawable(R.drawable.gradient_orange_dark_bg));
+        }else {
+            vBg.setBackground(context.getDrawable(R.drawable.gradient_orange_bg));
+        }
+
 
     }
 
@@ -38,11 +49,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     public int getItemCount() {
         return data.size();
     }
+    View vBg;
 
     class CategoryViewHolder extends RecyclerView.ViewHolder {
 
         public CategoryViewHolder(@NonNull View itemView) {
             super(itemView);
+            vBg = itemView.findViewById(R.id.v_bg);
         }
     }
 }
