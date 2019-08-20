@@ -71,6 +71,7 @@ public class PlaceFragment extends Fragment {
                 .enqueue(new Callback<ListPlaceResponse>() {
                     @Override
                     public void onResponse(Call<ListPlaceResponse> call, Response<ListPlaceResponse> response) {
+                        data.clear();
                         data.addAll(response.body().result);
                         configRV();
                     }

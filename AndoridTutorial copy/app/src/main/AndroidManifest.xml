@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".fragment.BottomTabActivity"></activity>
         <activity android:name=".fragment.MainActivity" />
         <activity android:name=".recyclerview.CategoryActivity" />
         <activity android:name=".recyclerview.PlacesActivity" />
@@ -22,6 +23,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
