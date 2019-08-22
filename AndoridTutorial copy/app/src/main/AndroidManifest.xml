@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="winds.com.androidtutorial">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".fragment.BottomTabActivity"></activity>
+        <activity
+            android:name=".fragment.NavigationDrawerActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".fragment.BottomTabActivity" />
         <activity android:name=".fragment.MainActivity" />
         <activity android:name=".recyclerview.CategoryActivity" />
         <activity android:name=".recyclerview.PlacesActivity" />
@@ -31,5 +32,7 @@
         <activity android:name=".UpdateUserInfoActivity" />
         <activity android:name=".LoginActivity" />
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
